@@ -1,0 +1,8 @@
+#img-bg{
+background-image: url('https://tecnico.ulisboa.pt/files/2020/12/cycleai-a-aplicacao-que-ira-ajudar-os-ciclistas-a-sentirem-se-mais-seguros-1140x641.jpg');
+min-height: 100vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
