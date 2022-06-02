@@ -5,27 +5,27 @@
         <form>
             <div class="form-group">
                 <label for="">Nome</label>
-                <input type="text" class="form-control">
+                <input [(ngModel)]="usuario.nome" type="text" class="form-control" >
             </div>
             <div class="form-group">
                 <label for="">Email</label>
-                <input type="email" class="form-control">
+                <input [(ngModel)]="usuario.usuario" type="email" class="form-control">
             </div>
             <div class="form-group">
                 <label for="">Imagem</label>
-                <input type="text" class="form-control">
+                <input [(ngModel)]="usuario.foto" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="">Senha</label>
-                <input type="password" class="form-control">
+                <input (input)="confirmaSenha($event)" type="password" class="form-control">
             </div>
             <div class="form-group">
                 <label for="">Confirmar Senha</label>
-                <input type="password" class="form-control">
+                <input [(ngModel)]="usuario.senha" type="password" class="form-control">
             </div>
             <div class="form-group">
                 <label for="">Tipo de usuário</label>
-                <select class="form-control" name="tipo" id="tipo">
+                <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
                     <option>Selecione um tipo de usuário:</option>
                     <option value="normal">Normal</option>
                     <option value="adm">Administrador</option>
@@ -34,7 +34,7 @@
 
             <div class="d-flex justify-content-around">
                 <button type="submit" class="btn btn-danger" routerLink="/entrar">Cancelar</button>
-                <button type="submit" class="btn btn-outline-primary">Cadastrar</button>
+                <button type="submit" class="btn btn-outline-primary" (click)="cadastrar()">Cadastrar</button>
             </div>
             
         </form>
