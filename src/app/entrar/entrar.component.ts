@@ -33,7 +33,7 @@ export class EntrarComponent implements OnInit {
           environment.foto = this.usuarioLogin.foto;
           environment.tipo = this.usuarioLogin.tipo;
           
-          this.router.navigate(['inicio'])
+          this.router.navigate(['/inicio'])
         },
         error: erro =>{
           if(erro.status == 401){

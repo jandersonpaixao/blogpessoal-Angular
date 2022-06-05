@@ -1,43 +1,45 @@
-<div class="row">
-    <div class="col-md-6" id="img-bg"></div>
-    <div class="col-md-4 pl-5 d-flex flex-column justify-content-center">
-        <h1 class="text-center">Cadastrar</h1>
-        <form>
-            <div class="form-group">
-                <label for="">Nome</label>
-                <input [(ngModel)]="usuario.nome" type="text" class="form-control" >
-            </div>
-            <div class="form-group">
-                <label for="">Email</label>
-                <input [(ngModel)]="usuario.usuario" type="email" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Imagem</label>
-                <input [(ngModel)]="usuario.foto" type="text" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Senha</label>
-                <input (input)="confirmaSenha($event)" type="password" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Confirmar Senha</label>
-                <input [(ngModel)]="usuario.senha" type="password" class="form-control">
-            </div>
-            <div class="form-group">
-                <label for="">Tipo de usuário</label>
-                <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
-                    <option>Selecione um tipo de usuário:</option>
-                    <option value="normal">Normal</option>
-                    <option value="adm">Administrador</option>
-                </select>
-            </div>
-
-            <div class="d-flex justify-content-around">
-                <button type="submit" class="btn btn-danger" routerLink="/entrar">Cancelar</button>
-                <button type="submit" class="btn btn-outline-primary" (click)="cadastrar()">Cadastrar</button>
-            </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6" id="img-bg"></div>
+        <div class="col-md-4 pl-5 d-flex flex-column justify-content-center">
+            <h1 class="text-center">Cadastrar</h1>
+            <form>
+                <div class="form-group">
+                    <label for="">Nome</label>
+                    <input [(ngModel)]="usuario.nome"  name="nome" type="text" class="form-control" >
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input [(ngModel)]="usuario.usuario" name="email" type="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Imagem</label>
+                    <input [(ngModel)]="usuario.foto" name="img" type="text" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Senha</label>
+                    <input (input)="confirmaSenha($event)" name="senha" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Confirmar Senha</label>
+                    <input [(ngModel)]="usuario.senha" name="confirmaSenha" type="password" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Tipo de usuário</label>
+                    <select class="form-control" name="tipo" id="tipo" (change)="tipoUsuario($event)">
+                        <option>Selecione um tipo de usuário:</option>
+                        <option value="normal">Normal</option>
+                        <option value="adm">Administrador</option>
+                    </select>
+                </div>
+    
+                <div class="d-flex justify-content-around">
+                    <button type="submit" class="btn btn-danger" routerLink="/entrar">Cancelar</button>
+                    <button type="submit" class="btn btn-outline-primary" (click)="cadastrar()">Cadastrar</button>
+                </div>
+                
+            </form>
             
-        </form>
-        
+        </div>
     </div>
 </div>
