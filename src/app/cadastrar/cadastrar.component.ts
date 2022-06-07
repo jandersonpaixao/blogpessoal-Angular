@@ -27,7 +27,7 @@ export class CadastrarComponent implements OnInit {
 
   confirmaSenha(event: any){
     this.confirmarSenha = event.target.value;
-    console.log(this.confirmarSenha)
+    
   }
 
   tipoUsuario(event: any){
@@ -35,7 +35,7 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar() {
-    console.log(this.usuario.senha)
+    
     if ( this.confirmarSenha == this.usuario.senha ) {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
