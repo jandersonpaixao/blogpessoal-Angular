@@ -47,13 +47,13 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let tema of listaTemas">
-                    <th scope="row">{{tema.id}}</th>
-                    <td>{{tema.descricao}}</td>
+                  <tr *ngFor="let item of listaTemas">
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.descricao}}</td>
                     <td class="d-flex justify-content-end">
-                        <a class="btn btn-info mr-3" href="">Editar</a>
-                        <a  class="btn btn-danger" href=""> Apagar</a></td>
-                    <td></td>
+                        <a class="btn btn-info mr-3" href="" [routerLink]="['/tema-edit',item.id]">Editar</a>
+                        <a  class="btn btn-danger" href="" [routerLink]="['/tema-delete', item.id]"> Apagar</a>
+                    </td>                    
                   </tr>
                 </tbody>
               </table>
