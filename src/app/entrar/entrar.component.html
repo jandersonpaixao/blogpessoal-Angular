@@ -1,0 +1,26 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 d-flex flex-column justify-content-center">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-8">
+                    <p class="text-center h1">Entrar</p>
+                    <form>
+                        <div class="form-group">
+                            <label for="">Email:</label>
+                            <input [(ngModel)]="usuarioLogin.usuario"  name="email" type="email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Senha:</label>
+                            <input [(ngModel)]="usuarioLogin.senha" name="senha" type="password" class="form-control">
+                        </div>
+                        <button class="btn btn-success d-block mx-auto w-50" (click)="entrar()">Entrar</button>
+                    </form> 
+                    <hr>
+                    <p class="text-center h3">Ainda não tem uma conta? <a routerLink="/cadastrar">Crie uma agora!</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6" id="img-bg"></div>
+    </div>
+</div>
+
