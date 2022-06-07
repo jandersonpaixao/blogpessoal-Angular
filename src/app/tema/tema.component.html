@@ -43,15 +43,17 @@
                   <tr>
                     <th scope="col">ID</th>
                     <th scope="col">Descrição</th>
-                    <th scope="col">Ações</th>
+                    <th scope="col" class="text-right">Modificações</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr *ngFor="let tema of listaTemas">
                     <th scope="row">{{tema.id}}</th>
                     <td>{{tema.descricao}}</td>
-                    <td><a href="">editar</a> <a href=""> apagar</a></td>
-                    <td>@mdo</td>
+                    <td class="d-flex justify-content-end">
+                        <a class="btn btn-info mr-3" href="">Editar</a>
+                        <a  class="btn btn-danger" href=""> Apagar</a></td>
+                    <td></td>
                   </tr>
                 </tbody>
               </table>

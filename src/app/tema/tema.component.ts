@@ -31,7 +31,7 @@ export class TemaComponent implements OnInit {
   }
 
   buscarTemas(){
-    this.temaService.getTema().subscribe((resp: Tema[])=>{
+    this.temaService.getAllTema().subscribe((resp: Tema[])=>{
       this.listaTemas = resp
     })
   }
@@ -40,7 +40,7 @@ export class TemaComponent implements OnInit {
   cadastrarTema(){
     this.temaService.postTema(this.tema).subscribe((resp: Tema)=>{
       this.tema = resp
-      alert('Novo tema criado')
+      alert('Um novo tema foi criado :)')
       this.buscarTemas()
       this.tema = new Tema()
 
