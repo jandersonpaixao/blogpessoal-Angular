@@ -36,6 +36,7 @@ export class CadastrarComponent implements OnInit {
 
   cadastrar() {
     
+    
     if ( this.confirmarSenha == this.usuario.senha ) {
       this.authService.cadastrar(this.usuario).subscribe((resp: Usuario) => {
         this.usuario = resp
